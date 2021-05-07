@@ -1,5 +1,12 @@
 body {
-  background-color: whitesmoke;
+  background-color: #212121;
   box-sizing: border-box;
+  color: white;
 }
 
+.Header {
+  background-color: #333;
+  height: 70px;
+  text-align: center;
+  width: 100%;
+}
