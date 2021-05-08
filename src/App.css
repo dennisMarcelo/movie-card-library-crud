@@ -2,11 +2,21 @@ body {
   background-color: #212121;
   box-sizing: border-box;
   color: white;
+  font-size: 16px;
 }
 
 .Header {
   background-color: #333;
+  font-size: 1.8rem;
   height: 70px;
   text-align: center;
   width: 100%;
+}
+
+.PageNotFound {
+  color: red;
+  font-family: Courier , monospace;
+  font-size: 1.8rem;
+  padding-top: 100px;
+  text-align: center;
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch } from 'react-router';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import MovieList from '../pages/MovieList';
 import NewMovie from '../pages/NewMovie';
 import MovieDetails from '../pages/MovieDetails';
@@ -15,7 +15,10 @@ class Main extends React.Component {
           <Route path="/movies/new" component={ NewMovie } />
           <Route path="/movies/:id/edit" component={ EditMovie } />
           <Route path="/movies/:id" component={ MovieDetails } />
-          <Route path="" component={ NotFound } />
+          <Route path="/404" component={ NotFound } />
+          <Route path="">
+            <Redirect to="/404" />
+          </Route>
         </Switch>
       </main>
     );
