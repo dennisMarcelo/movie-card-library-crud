@@ -6,7 +6,7 @@ body {
 }
 
 .Header {
-  background-color: #333;
+  background-color: #424242;
   font-size: 1.8rem;
   height: 70px;
   text-align: center;
@@ -14,9 +14,74 @@ body {
 }
 
 .PageNotFound {
-  color: red;
+  color: #d32f2f;
   font-family: Courier , monospace;
   font-size: 1.8rem;
   padding-top: 100px;
   text-align: center;
+}
+
+.loding {
+  color: #64b5f6;
+  font-size: 2rem;
+  padding: 15%;
+  text-align: center;
+}
+
+/* Movie List */
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 30px auto;
+  max-width: 1200px;
+
+}
+
+.movie-card {
+  background-color: white;
+  box-shadow: 5px 5px 10px rgba(22, 19, 19, 0.781);
+  color: black;
+  margin: 10px;
+  margin-bottom: 30px;
+  max-width: 350px;
+}
+
+.background-card {
+  background-size: cover;
+  display: flex;
+  height: 200px;
+}
+
+.background-card h1 {
+  align-self: flex-end;
+  backdrop-filter: blur(5px);
+  background-color: #0505053d;
+  box-shadow: 0 0 50px 10px #0505053d;
+  color: rgba(255, 255, 255, 0.863);
+  font-size: 1.2rem;
+  margin: 0 0 15px 10px;
+  padding: 0 5px;
+}
+
+.movie-list p {
+  height: 130px;
+  margin: 16px 8px;
+  overflow: auto;
+}
+
+.more-information {
+  background-color: #424242;
+  border-top: 1px solid black;
+  height: 40px;
+  position: relative;
+  width: 100%;
+}
+
+.more-information a {
+  color: #ffb74d;
+  display: block;
+  margin: 8px;
+  text-decoration: none;
+  width: 110px;
 }
