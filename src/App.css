@@ -51,6 +51,7 @@ body {
   background-size: cover;
   display: flex;
   height: 200px;
+  min-width: 350px;
 }
 
 .background-card h1 {
@@ -92,6 +93,19 @@ a:hover {
 
 a:active {
   color: #81c784;
+}
+
+.box-controler-movie-list {
+  background-color: rgba(104, 100, 100, 0.185);
+  height: 40px;
+  margin: 0;
+  padding: 5px 0;
+  width: 100%;
+}
+
+.box-controler-movie-list a {
+  margin: 10px;
+  width: 150px;
 }
 
 /* movie details */
