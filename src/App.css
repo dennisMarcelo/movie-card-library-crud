@@ -40,7 +40,7 @@ body {
 
 .movie-card {
   background-color: white;
-  box-shadow: 5px 5px 10px rgba(22, 19, 19, 0.781);
+  box-shadow: 14px 15px 20px 3px rgba(22, 19, 19, 0.781);
   color: black;
   margin: 10px;
   margin-bottom: 30px;
@@ -78,10 +78,64 @@ body {
   width: 100%;
 }
 
-.more-information a {
+a {
   color: #ffb74d;
   display: block;
-  margin: 8px;
+  margin: 7px;
   text-decoration: none;
-  width: 110px;
+  width: 105px;
+}
+
+a:hover {
+  color: #f57c00;
+}
+
+a:active {
+  color: #81c784;
+}
+
+/* movie details */
+.card-datails {
+  background-color: white;
+  box-shadow: 14px 15px 20px 3px rgba(22, 19, 19, 0.781);
+  color: black;
+  margin: 30px auto;
+  max-width: 680px;
+}
+
+.header-movie-details img {
+  width: 100%;
+}
+
+.header-movie-details p {
+  backdrop-filter: blur(5px);
+  background-color: #0505053d;
+  box-shadow: 0 0 50px 10px #0505053d;
+  color: rgba(255, 255, 255, 0.863);
+  display: inline;
+  font-size: 1.2rem;
+  left: 10px;
+  position: relative;
+  top: -71px;
+}
+
+.descriptions-movie-details {
+  margin-top: -38px;
+  padding: 10px;
+}
+
+.options-movie-details {
+  background-color: #424242;
+  border-top: 1px solid black;
+  min-height: 50px;
+  position: relative;
+  width: 100%;
+}
+
+.options-movie-details button {
+  background: none;
+  border: none;
+  font-size: 0.75rem;
+  margin: 10px;
+  padding: 0;
 }
