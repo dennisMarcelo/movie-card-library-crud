@@ -40,42 +40,47 @@ class MovieDetails extends Component {
     });
   }
 
-  cardMovie = () => {
-    const { title, storyline, imagePath, genre, rating, subtitle, id } = this.state;
-    return (
-      <div className="card-datails">
-        <header className="header-movie-details">
-          <img alt="Movie Cover" src={ `../${imagePath}` } />
-          <p>{ ` ${title}` }</p>
-        </header>
-        <div className="descriptions-movie-details">
-          <p>{ `Subtitle: ${subtitle}` }</p>
-          <p>{ `Storyline: ${storyline}` }</p>
-          <p>{ `Genre: ${genre}` }</p>
-          <p>{ `Rating: ${rating}` }</p>
-        </div>
-        <div className="options-movie-details">
-          <button type="button">
-            <Link to={ `/movies/${id}/edit` }>
-              EDITAR
-            </Link>
-          </button>
-          <button type="button">
-            <Link to="/">
-              VOLTAR
-            </Link>
-          </button>
-        </div>
-      </div>
-    );
-  }
-
   render() {
-    const { loading } = this.state;
+    const {
+      loading,
+      title,
+      storyline,
+      imagePath,
+      genre,
+      rating,
+      subtitle,
+      id } = this.state;
+
+    if (loading === true) {
+      return <Loading />;
+    }
 
     return (
       <div data-testid="movie-details">
-        {loading ? <Loading /> : this.cardMovie()}
+        <div className="card-datails">
+          <header className="header-movie-details">
+            <img alt="Movie Cover" src={ `../${imagePath}` } />
+            <p>{ ` ${title}` }</p>
+          </header>
+          <div className="descriptions-movie-details">
+            <p>{ `Subtitle: ${subtitle}` }</p>
+            <p>{ `Storyline: ${storyline}` }</p>
+            <p>{ `Genre: ${genre}` }</p>
+            <p>{ `Rating: ${rating}` }</p>
+          </div>
+          <div className="options-movie-details">
+            <button type="button">
+              <Link to={ `/movies/${id}/edit` }>
+                EDITAR
+              </Link>
+            </button>
+            <button type="button">
+              <Link to="/">
+                VOLTAR
+              </Link>
+            </button>
+          </div>
+        </div>
       </div>
     );
   }

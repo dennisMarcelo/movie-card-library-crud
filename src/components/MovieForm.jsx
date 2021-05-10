@@ -126,7 +126,7 @@ class MovieForm extends React.Component {
             min={ 0 }
             max={ 5 }
             value={ rating }
-            onChange={ (event) => this.updateMovie('rating', event.target.value) }
+            onChange={ (event) => this.updateMovie('rating', Number(event.target.value)) }
           />
           Avaliação
         </label>
@@ -163,5 +163,19 @@ class MovieForm extends React.Component {
     );
   }
 }
+
+MovieForm.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+  movie: PropTypes.shape({
+    id: PropTypes.number,
+    title: PropTypes.string,
+    subtitle: PropTypes.string,
+    storyline: PropTypes.string,
+    rating: PropTypes.number,
+    imagePath: PropTypes.string,
+    bookmarked: PropTypes.bool,
+    genre: PropTypes.string,
+  }).isRequired,
+};
 
 export default MovieForm;
