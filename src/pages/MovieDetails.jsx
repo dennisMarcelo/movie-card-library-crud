@@ -51,6 +51,8 @@ class MovieDetails extends Component {
       subtitle,
       id } = this.state;
 
+    const CutImage = imagePath.slice(0, 4);
+
     if (loading === true) {
       return <Loading />;
     }
@@ -59,7 +61,12 @@ class MovieDetails extends Component {
       <div data-testid="movie-details">
         <div className="card-datails">
           <header className="header-movie-details">
-            <img alt="Movie Cover" src={ `../${imagePath}` } />
+            <img
+              alt="Movie Cover"
+              src={ CutImage === 'http'
+                ? imagePath
+                : `../${imagePath}` }
+            />
             <p>{ ` ${title}` }</p>
           </header>
           <div className="descriptions-movie-details">
@@ -77,6 +84,14 @@ class MovieDetails extends Component {
             <button type="button">
               <Link to="/">
                 VOLTAR
+              </Link>
+            </button>
+            <button
+              type="button"
+              onClick={ () => movieAPI.deleteMovie(id) }
+            >
+              <Link to="/">
+                DELETAR
               </Link>
             </button>
           </div>
