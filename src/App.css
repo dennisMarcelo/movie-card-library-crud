@@ -7,8 +7,10 @@ body {
 
 .Header {
   background-color: #424242;
-  font-size: 1.8rem;
+  color: #48a8f7;
+  font-size: 2rem;
   height: 70px;
+  padding-top: 5px;
   text-align: center;
   width: 100%;
 }
@@ -152,4 +154,55 @@ a:active {
   font-size: 0.75rem;
   margin: 10px;
   padding: 0;
+}
+
+
+.form-container {
+  margin: 30px auto;
+  max-width: 800px;
+}
+
+.form-container div button {
+  background: none;
+  border: none;
+  color: #ffb74d;
+  display: block;
+  font-size: 1.1rem;
+  margin: 20px auto;
+  padding: 5px 20px;
+  text-decoration: none;
+  width: 110px;
+}
+
+.form-container button:hover {
+  color: #f57c00;
+}
+
+.form-container button:active {
+  color: #81c784;
+}
+
+form {
+  width: 100%;
+}
+
+input, textarea, select {
+  border-radius: 10px;
+  font-size: 0.9rem;
+  margin: 5px 0 25px;
+  width: 100%;
+}
+
+textarea:focus, input:focus, select:focus {
+  border: 0 none;
+  box-shadow: 0 0 0 0;
+  outline: 0;
+}
+
+input, select {
+  height: 30px;
+}
+
+textarea {
+  height: 60px;
 }
