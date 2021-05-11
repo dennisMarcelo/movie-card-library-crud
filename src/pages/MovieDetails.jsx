@@ -51,7 +51,8 @@ class MovieDetails extends Component {
       subtitle,
       id } = this.state;
 
-    const CutImage = imagePath.slice(0, 4);
+    const FINAL_NUMBER = 4;
+    const CutImage = imagePath.slice(0, FINAL_NUMBER);
 
     if (loading === true) {
       return <Loading />;
