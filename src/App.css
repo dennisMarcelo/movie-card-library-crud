@@ -193,16 +193,16 @@ input, textarea, select {
   width: 100%;
 }
 
-textarea:focus, input:focus, select:focus {
-  border: 0 none;
-  box-shadow: 0 0 0 0;
-  outline: 0;
-}
-
 input, select {
   height: 30px;
 }
 
 textarea {
   height: 60px;
+}
+
+textarea:focus, input:focus, select:focus {
+  border: 0 none;
+  box-shadow: 0 0 0 0;
+  outline: 0;
 }
