@@ -66,7 +66,7 @@ class MovieDetails extends Component {
               alt="Movie Cover"
               src={ CutImage === 'http'
                 ? imagePath
-                : `../${imagePath}` }
+                : `${imagePath}` }
             />
             <p>{ ` ${title}` }</p>
           </header>

@@ -76,7 +76,8 @@ body {
 .more-information {
   background-color: #424242;
   border-top: 1px solid black;
-  height: 40px;
+  bottom: -7px;
+  min-height: 40px;
   position: relative;
   width: 100%;
 }
